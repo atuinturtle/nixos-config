@@ -21,6 +21,11 @@
     telegram-desktop
   ];
 
+  # In your home.nix
+  programs.bash.shellAliases = {
+    rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos";
+  };
+
   # Git configuration
   programs.git = {
     enable = true;
