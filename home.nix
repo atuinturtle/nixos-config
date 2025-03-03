@@ -18,6 +18,7 @@
     spotify
     obsidian
     code-cursor
+    jetbrains.idea-community-bin
   ];
 
   # In your home.nix
