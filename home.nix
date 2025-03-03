@@ -15,10 +15,9 @@
 
   # Packages to install
   home.packages = with pkgs; [
-    vscode
     spotify
     obsidian
-    telegram-desktop
+    code-cursor
   ];
 
   # In your home.nix
