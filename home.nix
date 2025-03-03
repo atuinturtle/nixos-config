@@ -20,6 +20,7 @@
     code-cursor
     jetbrains.idea-community-bin
     brave
+    mpv
   ];
 
   # In your home.nix
