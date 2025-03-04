@@ -21,6 +21,7 @@
     jetbrains.idea-community-bin
     brave
     mpv
+    docker
   ];
 
   # In your home.nix
