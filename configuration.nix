@@ -48,6 +48,21 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enable Docker
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+  };
+
+  # Add user to docker group
+  users.users.mmakay.extraGroups = [ "networkmanager" "wheel" "docker" ];
+
+  # Plex firewall configuration
+  networking.firewall = {
+    allowedTCPPorts = [ 32400 3005 8324 32469 ];
+    allowedUDPPorts = [ 1900 5353 32410 32412 32413 32414 ];
+  };
+
   # Automatic system updates
   system.autoUpgrade = {
     enable = true;
@@ -137,7 +152,7 @@
   users.users.mmakay = {
     isNormalUser = true;
     description = "Makay Mátyás";
-    extraGroups = [ "networkmanager" "wheel" ];
+    # Note: extraGroups is now moved to the top of the file where other docker configurations are
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -186,12 +201,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
