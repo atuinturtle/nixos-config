@@ -23,6 +23,7 @@
     mpv
     docker
     docker-compose
+    btrfs-progs
   ];
 
   # In your home.nix
