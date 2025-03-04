@@ -22,6 +22,7 @@
     brave
     mpv
     docker
+    docker-compose
   ];
 
   # In your home.nix
