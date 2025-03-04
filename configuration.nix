@@ -27,6 +27,25 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Automatic system updates
+  system.autoUpgrade = {
+    enable = true;
+    flake = "~/nixos-config#nixos";
+    flags = [ "--update-input" "nixpkgs" ];
+    dates = "0/3 0:00:00";  # Run every 3 days at midnight
+    randomizedDelaySec = "45min";
+  };
+
+  # Automatic garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";  # Run once a week
+    options = "--delete-older-than 7d";  # Delete generations older than 7 days
+  };
+
+  # Optimize store to save disk space
+  nix.settings.auto-optimise-store = true;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -75,7 +94,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  # FIXED: Changed hardware.pulseaudio to services.pulseaudio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -105,7 +123,6 @@
   };
 
   # Enable automatic login for the user.
-  # FIXED: Changed services.xserver.displayManager.autoLogin to services.displayManager.autoLogin
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "mmakay";
 
@@ -125,9 +142,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     discord
-    # Temporarily commented out JetBrains packages that were causing hash mismatches
-    # jetbrains.idea-community
-    # jetbrains.pycharm-community
     python314
     git
     home-manager
