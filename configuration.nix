@@ -59,7 +59,7 @@
 
   # Plex firewall configuration
   networking.firewall = {
-    allowedTCPPorts = [ 32400 3005 8324 32469 ];
+    allowedTCPPorts = [ 32400 3005 8324 32469 8080 ];
     allowedUDPPorts = [ 1900 5353 32410 32412 32413 32414 ];
   };
 
