@@ -25,6 +25,27 @@
   };
   boot.loader.systemd-boot.enable = false;
 
+  # Add btrfs support
+  boot.supportedFilesystems = [ "btrfs" ];
+  
+  # Configure mounts for your SSD with Steam games and Plex media
+  fileSystems."/mnt/storage" = {
+    device = "/dev/disk/by-uuid/059a8a02-5b90-43e1-b85b-187c890c1f2d";
+    fsType = "btrfs";
+  };
+
+  fileSystems."/mnt/games" = {
+    device = "/dev/disk/by-uuid/059a8a02-5b90-43e1-b85b-187c890c1f2d";
+    fsType = "btrfs";
+    options = [ "subvol=games" "compress=zstd" "noatime" ];
+  };
+
+  fileSystems."/mnt/media" = {
+    device = "/dev/disk/by-uuid/059a8a02-5b90-43e1-b85b-187c890c1f2d";
+    fsType = "btrfs";
+    options = [ "subvol=media" "compress=zstd" "noatime" ];
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Automatic system updates
