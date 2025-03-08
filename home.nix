@@ -24,8 +24,7 @@
     docker
     docker-compose
     btrfs-progs
-    qbittorrent 
-    nodejs_23
+    qbittorrent
   ];
 
   # In your home.nix
