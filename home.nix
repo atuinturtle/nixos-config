@@ -25,6 +25,7 @@
     docker-compose
     btrfs-progs
     qbittorrent
+    wineWowPackages.staging
   ];
 
   # In your home.nix
