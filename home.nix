@@ -26,6 +26,7 @@
     btrfs-progs
     qbittorrent
     wineWowPackages.staging
+    yt-dlp
   ];
 
   # In your home.nix
