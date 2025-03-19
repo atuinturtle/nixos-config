@@ -27,7 +27,7 @@
     qbittorrent
     wineWowPackages.staging
     yt-dlp
-    syncthing
+    calibre
   ];
 
   # In your home.nix
