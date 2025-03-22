@@ -19,6 +19,7 @@
     obsidian
     code-cursor
     jetbrains.idea-community-bin
+    jetbrains.webstorm
     brave
     mpv
     docker
