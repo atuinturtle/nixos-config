@@ -26,9 +26,11 @@
     docker-compose
     btrfs-progs
     qbittorrent
-    wineWowPackages.staging
+    wineWowPackages.yabridge 
     yt-dlp
     calibre
+    droidcam
+    neovim
   ];
 
   # In your home.nix
