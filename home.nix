@@ -29,7 +29,6 @@
     wineWowPackages.yabridge 
     yt-dlp
     calibre
-    droidcam
     neovim
   ];
 
