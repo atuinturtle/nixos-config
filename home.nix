@@ -30,6 +30,7 @@
     yt-dlp
     calibre
     neovim
+    tailscale
   ];
 
   # In your home.nix
