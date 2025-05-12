@@ -24,6 +24,11 @@
           # Import your existing configuration
           ./configuration.nix
 
+	  # Enable Tailscale system service
+          {
+            services.tailscale.enable = true;
+          }
+
           # Integrate home-manager
           home-manager.nixosModules.home-manager
           {
