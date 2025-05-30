@@ -114,8 +114,7 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  programs.hyprland.enable;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -180,6 +179,21 @@
     discord
     git
     home-manager
+    waybar
+    mako
+    libnotify
+    swww
+    kitty
+    rofi-wayland
+  ];
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
+  environment.systemPackages = [
+    (pkgs.waybar.overrideAttrs (oldAttrs: {
+      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    }))
   ];
 
   programs.steam = {
