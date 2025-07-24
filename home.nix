@@ -18,7 +18,7 @@
     spotify
     obsidian
     code-cursor
-    jetbrains.idea-community-bin
+    jetbrains.idea-community
     jetbrains.webstorm
     brave
     mpv
