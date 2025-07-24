@@ -18,8 +18,6 @@
     spotify
     obsidian
     code-cursor
-    jetbrains.idea-community
-    jetbrains.webstorm
     brave
     mpv
     docker
