@@ -28,6 +28,7 @@
     yt-dlp
     calibre
     neovim
+    jetbrains.idea-community
   ];
 
   # In your home.nix
