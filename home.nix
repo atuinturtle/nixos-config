@@ -28,7 +28,9 @@
     yt-dlp
     calibre
     neovim
-    jetbrains.idea-community
+    jetbrains.idea-community-bin
+    github-copilot-intellij-agent
+    postman
   ];
 
   # In your home.nix
