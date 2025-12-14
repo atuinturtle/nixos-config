@@ -30,7 +30,10 @@
     neovim
     jetbrains.idea-community-bin
     github-copilot-intellij-agent
-    postman
+    protonup-qt
+    gimp
+    libreoffice
+    unrar
   ];
 
   # In your home.nix
