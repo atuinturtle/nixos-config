@@ -116,6 +116,9 @@
   # Enable the KDE Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth.package = pkgs.bluez;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -182,6 +185,7 @@
     home-manager
     kdePackages.dolphin
     kdePackages.konsole
+    kdePackages.kcalc
   ];
 
   programs.steam = {
