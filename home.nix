@@ -28,12 +28,13 @@
     yt-dlp
     calibre
     neovim
-    jetbrains.idea-community-bin
+    jetbrains.idea
     github-copilot-intellij-agent
     protonup-qt
     gimp
     libreoffice
     unrar
+    r2modman
   ];
 
   # In your home.nix
