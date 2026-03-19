@@ -24,7 +24,7 @@
     docker-compose
     btrfs-progs
     qbittorrent
-    wineWowPackages.stable 
+    wineWow64Packages.stable 
     yt-dlp
     calibre
     neovim
