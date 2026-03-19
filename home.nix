@@ -35,6 +35,7 @@
     libreoffice
     unrar
     r2modman
+    claude-code
   ];
 
   # In your home.nix
