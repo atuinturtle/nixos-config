@@ -46,28 +46,19 @@
   # Git configuration
   programs.git = {
     enable = true;
-    userName = "Mátyás Makay";
-    userEmail = "mmakay94@gmail.com";
-    
-    # Additional Git configurations
-    extraConfig = {
+    settings = {
+      user.name = "Mátyás Makay";
+      user.email = "mmakay94@gmail.com";
       init.defaultBranch = "main";
       pull.rebase = false;
       color.ui = true;
-      
-      # You can add more git configurations here
-      # For example:
-      # core.editor = "vim";
-      # merge.tool = "vimdiff";
-    };
-    
-    # Optional: Configure Git aliases
-    aliases = {
-      co = "checkout";
-      ci = "commit";
-      st = "status";
-      br = "branch";
-      hist = "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short";
+      alias = {
+        co = "checkout";
+        ci = "commit";
+        st = "status";
+        br = "branch";
+        hist = "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short";
+      };
     };
     
     # Optional: Configure Git ignores globally
