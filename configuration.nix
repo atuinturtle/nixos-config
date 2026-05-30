@@ -205,6 +205,26 @@
 
   # List services that you want to enable:
 
+  # AMD GPU hardware acceleration (VAAPI)
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      libva
+      libva-utils
+      mesa
+    ];
+  };
+
+  # Enable Jellyfin media server
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+  };
+  users.users.jellyfin.extraGroups = [ "users" "render" "video" ];
+
+  # Hamachi VPN
+  services.logmein-hamachi.enable = true;
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 

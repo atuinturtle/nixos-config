@@ -23,8 +23,7 @@
     docker
     docker-compose
     btrfs-progs
-    qbittorrent
-    wineWow64Packages.stable 
+    qbittorrent 
     yt-dlp
     calibre
     neovim
@@ -36,6 +35,7 @@
     unrar
     r2modman
     claude-code
+    haguichi
   ];
 
   # In your home.nix
